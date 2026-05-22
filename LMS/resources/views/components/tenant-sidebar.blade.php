@@ -20,54 +20,62 @@
             <p class="text-[10px] font-bold text-slate-600 uppercase tracking-wider px-2 mb-2">Core Modules</p>
 
             <a href="/Tenant-dashboard"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-xs transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-dashboard') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-grid-1x2-fill text-sm"></i>
+                    <i
+                        class="bi bi-grid-1x2-fill text-sm {{ request()->is('Tenant-dashboard') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Dashboard</span>
                 </div>
             </a>
 
             <a href="/Tenant-Faculty-management"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Faculty-management') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-person-badge text-sm text-slate-500 group-hover:text-slate-300"></i>
+                    <i
+                        class="bi bi-person-badge text-sm {{ request()->is('Tenant-Faculty-management') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Faculty Management</span>
                 </div>
                 <span
-                    class="bg-slate-800 group-hover:bg-slate-750 text-[10px] text-slate-400 font-bold px-2 py-0.5 rounded-md">48</span>
+                    class="{{ request()->is('Tenant-Faculty-management') ? 'bg-blue-700 text-blue-100' : 'bg-slate-800 group-hover:bg-slate-750 text-slate-400' }} text-[10px] font-bold px-2 py-0.5 rounded-md">48</span>
             </a>
 
             <a href="/Tenant-Student-Registry"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Student-Registry') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-mortarboard text-sm text-slate-500 group-hover:text-slate-300"></i>
+                    <i
+                        class="bi bi-mortarboard text-sm {{ request()->is('Tenant-Student-Registry') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Student Registry</span>
                 </div>
             </a>
 
             <a href="/Tenant-Classes-Timetables"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Classes-Timetables') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-calendar3 text-sm text-slate-500 group-hover:text-slate-300"></i>
+                    <i
+                        class="bi bi-calendar3 text-sm {{ request()->is('Tenant-Classes-Timetables') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Classes & Timetables</span>
                 </div>
             </a>
 
             <a href="/Tenant-Attendence-Rate"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Attendence-Rate') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-calendar-check text-sm text-slate-500 group-hover:text-slate-300"></i>
+                    <i
+                        class="bi bi-calendar-check text-sm {{ request()->is('Tenant-Attendence-Rate') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Attendance Rate</span>
                 </div>
             </a>
 
             <a href="/Tenant-Fees"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Fees') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
-                    <i class="bi bi-wallet2 text-sm text-slate-500 group-hover:text-slate-300"></i>
+                    <i
+                        class="bi bi-wallet2 text-sm {{ request()->is('Tenant-Fees') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Fee Collections</span>
                 </div>
-                <i class="bi bi-exclamation-circle text-amber-500 text-xs animate-pulse"></i>
+                @unless (request()->is('Tenant-Fees'))
+                    <i class="bi bi-exclamation-circle text-amber-500 text-xs animate-pulse"></i>
+                @endunless
             </a>
         </div>
     </div>

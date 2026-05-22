@@ -102,17 +102,82 @@
                                         the current semester.</p>
                                 </div>
                                 <select
-                                    class="text-xs bg-slate-50 border border-slate-200 rounded-md p-1 px-2 font-semibold text-slate-600 cursor-pointer">
-                                    <option value="6">Last 6 Months</option>
+                                    class="text-xs bg-slate-50 border border-slate-200 rounded-md p-1 px-2 font-semibold text-slate-600 pointer-events-none">
+                                    <option value="6">Last 4 Months</option>
                                     <option value="12">Full Academic Year</option>
                                 </select>
                             </div>
 
-                            <div
-                                class="flex-1 my-6 border border-dashed border-slate-200 rounded-xl bg-slate-50/50 flex flex-col items-center justify-center p-4">
-                                <i class="bi bi-graph-up text-3xl text-slate-300 mb-2"></i>
-                                <span class="text-xs text-slate-400 font-semibold">Chart integration area (ApexCharts /
-                                    Chart.js)</span>
+                            <div class="flex-1 my-6 flex flex-col justify-end pt-4">
+                                <div
+                                    class="h-44 flex items-end justify-between gap-4 sm:gap-8 px-4 border-b border-l border-slate-100 relative">
+
+                                    <div class="w-full flex justify-center items-end gap-1 h-full relative group">
+                                        <div
+                                            class="w-4 sm:w-6 bg-blue-500 rounded-t-xs h-[75%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                1.2M</span>
+                                        </div>
+                                        <div
+                                            class="w-4 sm:w-6 bg-amber-500 rounded-t-xs h-[25%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                400K</span>
+                                        </div>
+                                        <p class="absolute -bottom-6 text-xs text-slate-400 font-semibold">Feb</p>
+                                    </div>
+
+                                    <div class="w-full flex justify-center items-end gap-1 h-full relative group">
+                                        <div
+                                            class="w-4 sm:w-6 bg-blue-500 rounded-t-xs h-[85%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                1.5M</span>
+                                        </div>
+                                        <div
+                                            class="w-4 sm:w-6 bg-amber-500 rounded-t-xs h-[15%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                250K</span>
+                                        </div>
+                                        <p class="absolute -bottom-6 text-xs text-slate-400 font-semibold">Mar</p>
+                                    </div>
+
+                                    <div class="w-full flex justify-center items-end gap-1 h-full relative group">
+                                        <div
+                                            class="w-4 sm:w-6 bg-blue-500 rounded-t-xs h-[60%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                950K</span>
+                                        </div>
+                                        <div
+                                            class="w-4 sm:w-6 bg-amber-500 rounded-t-xs h-[40%] transition-all group-hover:brightness-95 relative">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                620K</span>
+                                        </div>
+                                        <p class="absolute -bottom-6 text-xs text-slate-400 font-semibold">Apr</p>
+                                    </div>
+
+                                    <div class="w-full flex justify-center items-end gap-1 h-full relative group">
+                                        <div
+                                            class="w-4 sm:w-6 bg-blue-600 rounded-t-xs h-[90%] transition-all group-hover:brightness-95 relative shadow-xs">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                1.8M</span>
+                                        </div>
+                                        <div
+                                            class="w-4 sm:w-6 bg-amber-600 rounded-t-xs h-[10%] transition-all group-hover:brightness-95 relative shadow-xs">
+                                            <span
+                                                class="absolute -top-7 left-1/2 -translate-x-1/2 text-[10px] font-bold bg-slate-800 text-white px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">Rs.
+                                                200K</span>
+                                        </div>
+                                        <p class="absolute -bottom-6 text-xs text-slate-800 font-bold">May</p>
+                                    </div>
+
+                                </div>
+                                <div class="h-4"></div>
                             </div>
 
                             <div class="flex items-center gap-6 text-xs text-slate-500 border-t border-slate-100 pt-4">
