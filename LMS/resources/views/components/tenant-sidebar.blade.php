@@ -19,7 +19,7 @@
         <div class="space-y-1.5">
             <p class="text-[10px] font-bold text-slate-600 uppercase tracking-wider px-2 mb-2">Core Modules</p>
 
-            <a href="/tenant/dashboard"
+            <a href="/Tenant-dashboard"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-xs transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-grid-1x2-fill text-sm"></i>
@@ -27,7 +27,7 @@
                 </div>
             </a>
 
-            <a href="#"
+            <a href="/Tenant-Faculty-management"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-person-badge text-sm text-slate-500 group-hover:text-slate-300"></i>
@@ -37,7 +37,7 @@
                     class="bg-slate-800 group-hover:bg-slate-750 text-[10px] text-slate-400 font-bold px-2 py-0.5 rounded-md">48</span>
             </a>
 
-            <a href="#"
+            <a href="/Tenant-Student-Registry"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-mortarboard text-sm text-slate-500 group-hover:text-slate-300"></i>

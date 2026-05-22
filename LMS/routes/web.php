@@ -16,3 +16,5 @@ Route::view('/MA_global-settings','Main-admin.MA-global-settings');
 
 // admin / tenant routes
 Route::view('/Tenant-dashboard','Tenant.admin-dashboard');
+Route::view('/Tenant-Faculty-management','Tenant.Faculty-management');
+Route::view('/Tenant-Student-Registry','Tenant.Student-registry');
