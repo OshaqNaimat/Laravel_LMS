@@ -20,37 +20,28 @@
             <p class="text-[10px] font-bold text-slate-600 uppercase tracking-wider px-2 mb-2">My Classroom</p>
 
             <a href="/teacher_dashboard"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Teacher-dashboard') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('teacher_dashboard') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
                     <i
-                        class="bi bi-grid-1x2-fill text-sm {{ request()->is('Tenant-Teacher-dashboard') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
+                        class="bi bi-grid-1x2-fill text-sm {{ request()->is('teacher_dashboard') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Dashboard</span>
                 </div>
             </a>
 
             <a href="/teacher_attendence"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Attendence-Rate') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('teacher_attendence') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
                     <i
-                        class="bi bi-calendar-check text-sm {{ request()->is('Tenant-Attendence-Rate') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
+                        class="bi bi-calendar-check text-sm {{ request()->is('teacher_attendence') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>Mark Attendance</span>
                 </div>
             </a>
 
-            {{-- <a href="/Tenant-Student-Registry"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Student-Registry') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
-                <div class="flex items-center gap-3">
-                    <i
-                        class="bi bi-mortarboard text-sm {{ request()->is('Tenant-Student-Registry') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
-                    <span>Student Registry</span>
-                </div>
-            </a> --}}
-
             <a href="/teacher_timetable"
-                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('Tenant-Classes-Timetables') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
+                class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all group {{ request()->is('teacher_timetable') ? 'bg-blue-600 text-white' : 'hover:bg-slate-800 hover:text-slate-200 text-slate-400' }}">
                 <div class="flex items-center gap-3">
                     <i
-                        class="bi bi-calendar3 text-sm {{ request()->is('Tenant-Classes-Timetables') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
+                        class="bi bi-calendar3 text-sm {{ request()->is('teacher_timetable') ? 'text-white' : 'text-slate-500 group-hover:text-slate-300' }}"></i>
                     <span>My Timetable</span>
                 </div>
             </a>
