@@ -45,7 +45,7 @@
                 </div>
             </a>
 
-            <a href="#"
+            <a href="/Tenant-Classes-Timetables"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-calendar3 text-sm text-slate-500 group-hover:text-slate-300"></i>
@@ -53,7 +53,7 @@
                 </div>
             </a>
 
-            <a href="#"
+            <a href="/Tenant-Attendence-Rate"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-calendar-check text-sm text-slate-500 group-hover:text-slate-300"></i>
@@ -61,7 +61,7 @@
                 </div>
             </a>
 
-            <a href="#"
+            <a href="/Tenant-Fees"
                 class="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-slate-800 hover:text-slate-200 text-xs font-medium transition-all group">
                 <div class="flex items-center gap-3">
                     <i class="bi bi-wallet2 text-sm text-slate-500 group-hover:text-slate-300"></i>
