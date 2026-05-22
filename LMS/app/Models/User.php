@@ -25,14 +25,14 @@ class User extends Authenticatable
     ];
 
     // Check if the user belongs to a specific school
-    public function tenant(): BelongsTo
-    {
-        return $this->belongsTo(Tenant::class);
-    }
+    // public function tenant(): BelongsTo
+    // {
+    //     return $this->belongsTo(Tenant::class);
+    // }
 
-    // Helper check roles
-    public function isSuperAdmin(): bool
-    {
-        return $this->role === 'super_admin';
-    }
+    // // Helper check roles
+    // public function isSuperAdmin(): bool
+    // {
+    //     return $this->role === 'super_admin';
+    // }
 }

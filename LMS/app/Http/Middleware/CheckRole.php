@@ -15,24 +15,31 @@ class CheckRole
      * @param  string  ...$roles
      */
     public function handle(Request $request, Closure $next, string ...$roles): Response
-{
-    // 1. Ensure the user is actually logged in
-    if (!auth()->check()) {
-        return redirect()->route('login');
-    }
-
-    // 2. Safeguard: If the user's role doesn't match the required group, force a clean split
-    if (!in_array($request->user()->role, $roles)) {
-
-        // If they are trying to access a guest/wrong area, bounce them appropriately
-        if ($request->user()->role === 'super_admin') {
-            return redirect()->route('super.admin.dashboard');
+    {
+        // 1. Check if user is authenticated
+        if (!$request->user()) {
+            return redirect()->route('login');
         }
 
-        // Default protection block
-        abort(403, 'Unauthorized action.');
-    }
+        // 2. Check if user's role matches required roles
+        $userRole = $request->user()->role ?? null;
 
-    return $next($request);
-}
+        if (!in_array($userRole, $roles)) {
+            // Redirect based on user's actual role
+            if ($userRole === 'super_admin') {
+                return redirect()->route('super.admin.dashboard');
+            } elseif ($userRole === 'tenant_admin') {
+                return redirect()->route('tenant.dashboard');
+            } elseif ($userRole === 'teacher') {
+                return redirect()->route('teacher.dashboard');
+            } elseif ($userRole === 'student') {
+                return redirect()->route('student.dashboard');
+            }
+
+            // Default: Unauthorized
+            abort(403, 'Unauthorized action.');
+        }
+
+        return $next($request);
+    }
 }

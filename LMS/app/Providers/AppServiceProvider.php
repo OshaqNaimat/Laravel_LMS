@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Auth\Middleware\RedirectIfAuthenticated;
+use Illuminate\Support\Facades\Auth;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,23 +21,32 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // FIXED: Tell Laravel where authenticated users should go if they visit the root/login page
+        // Redirect authenticated users based on their role
         RedirectIfAuthenticated::redirectUsing(function () {
-            $user = auth()->user();
+            // Get the currently authenticated user
+            $user = Auth::user();
 
+            // If user is authenticated, redirect based on role
             if ($user) {
-                switch ($user->role) {
+                $role = $user->role ?? 'student';
+
+                switch ($role) {
                     case 'super_admin':
                         return route('super.admin.dashboard');
                     case 'tenant_admin':
+                        return route('tenant.dashboard');
+                    case 'admin':
                         return route('tenant.dashboard');
                     case 'teacher':
                         return route('teacher.dashboard');
                     case 'student':
                         return route('student.dashboard');
+                    default:
+                        return route('dashboard');
                 }
             }
 
+            // If not authenticated, go to login
             return route('login');
         });
     }
