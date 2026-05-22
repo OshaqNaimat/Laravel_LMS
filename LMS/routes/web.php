@@ -21,3 +21,8 @@ Route::view('/Tenant-Student-Registry','Tenant.Student-registry');
 Route::view('/Tenant-Classes-Timetables','Tenant.Classes&Timetables');
 Route::view('/Tenant-Attendence-Rate','Tenant.Attendence');
 Route::view('/Tenant-Fees','Tenant.Fees');
+
+// teacher routes
+Route::view('/teacher_dashboard','Tenant.teacher-dashboard');
+Route::view('/teacher_attendence','Tenant.teacher-attendence');
+Route::view('/teacher_timetable','Tenant.teacher-timetable');
