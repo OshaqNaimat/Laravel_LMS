@@ -59,7 +59,7 @@
                 <p class="text-[11px] text-slate-500">System Root</p>
             </div>
         </div>
-        <form action="#" method="POST" class="inline">
+        <form action="{{ route('logout') }}" method="POST" class="inline">
             @csrf
             <button type="submit"
                 class="text-slate-500 hover:text-rose-400 p-1.5 hover:bg-rose-500/10 rounded-lg transition-colors cursor-pointer"

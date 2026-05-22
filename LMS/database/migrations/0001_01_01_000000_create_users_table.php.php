@@ -13,10 +13,18 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+
+            // 1. ADDED: Tenant relationship (nullable so central Super Admins don't need a tenant_id)
+            $table->foreignId('tenant_id')->nullable()->constrained('tenants')->onDelete('cascade');
+
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            // 2. ADDED: User system roles
+            $table->string('role')->default('tenant_admin'); // super_admin, tenant_admin, student, teacher
+
             $table->rememberToken();
             $table->timestamps();
         });

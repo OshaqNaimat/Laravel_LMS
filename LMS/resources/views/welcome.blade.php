@@ -27,7 +27,7 @@
                     </p>
                 </div>
 
-                <form action="#" method="POST" class="space-y-4">
+                <form action="{{ route('login') }}" method="POST" class="space-y-4">
                     @csrf
 
                     <div class="space-y-1">
@@ -41,9 +41,12 @@
                                 <i class="bi bi-envelope text-xs"></i>
                             </div>
                             <input id="email" name="email" type="email" autocomplete="email" required
-                                placeholder="name@school.com"
-                                class="block w-full pl-9 pr-3 py-2 bg-slate-50/50 border border-slate-200 rounded-xl text-sm placeholder-slate-400 focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 focus:outline-hidden transition-all" />
+                                value="{{ old('email') }}" placeholder="name@school.com"
+                                class="block w-full pl-9 pr-3 py-2 bg-slate-50/50 border @error('email') border-red-400 focus:border-red-500 focus:ring-red-500/10 @else border-slate-200 focus:border-blue-500 focus:ring-blue-500/10 @enderror rounded-xl text-sm placeholder-slate-400 focus:bg-white focus:outline-hidden transition-all" />
                         </div>
+                        @error('email')
+                            <p class="mt-1 text-xs text-red-500 font-semibold tracking-wide pl-1">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <div class="space-y-1">
@@ -91,12 +94,12 @@
 
             </div>
 
-            <p class="text-center text-xs text-slate-400">
+            {{-- <p class="text-center text-xs text-slate-400">
                 Want to register a new institution?
                 <a href="#"
                     class="font-bold text-slate-600 hover:text-slate-900 underline transition-colors ml-0.5">Contact
                     Admin</a>
-            </p>
+            </p> --}}
         </div>
 
     </div>
