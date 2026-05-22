@@ -16,7 +16,7 @@
 
             <!-- Sidebar Navigation -->
             <nav class="p-4 space-y-1">
-                <a href="/"
+                <a href="/MA_Dahshboard"
                     class="flex items-center gap-3 px-4 py-2.5 bg-blue-600 text-white rounded-lg font-medium transition-all duration-200">
                     <i class="bi bi-grid-1x2-fill"></i> Dashboard
                 </a>
